@@ -5,8 +5,6 @@ function Nav () {
   return (
     <nav>
         <Link to="/"> <img src={Logo} className="nav-logo"style={{ width: 200, height: 150 }}/></Link>
-
-         <Link to="/articles" className="nav-articles">Articles </Link>
     </nav>
   )
 
