@@ -16,4 +16,10 @@ function fetchTopics() {
   });
 }
 
-export { fetchArticles, fetchTopics };
+function fetchSingleArticle(article_id) {
+  return articlesApi.get(`/articles/${article_id}`).then((res) => {
+    return res.data;
+  });
+}
+
+export { fetchArticles, fetchTopics, fetchSingleArticle };
