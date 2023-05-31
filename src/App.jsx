@@ -1,9 +1,11 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './Components/Home'
 import Nav from './Components/Nav'
-// import Articles from './Components/Articles'
+import Topics from './Components/Topics'
+// import TopicsCategory from './Components/TopicsCategory'
+
 
 function App() {
 
@@ -13,6 +15,8 @@ function App() {
     <Nav />
     <Routes>
       <Route path="/" element={<Home />}></Route>
+      <Route path="/topics" element={<Topics />}></Route>
+      {/* <Route path="/articles/:topic" element={<TopicsCategory />}></Route> */}
     </Routes>
 
     </>

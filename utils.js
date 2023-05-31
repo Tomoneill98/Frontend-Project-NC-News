@@ -10,4 +10,10 @@ function fetchArticles() {
   });
 }
 
-export { fetchArticles };
+function fetchTopics() {
+  return articlesApi.get("/topics").then((res) => {
+    return res.data;
+  });
+}
+
+export { fetchArticles, fetchTopics };
