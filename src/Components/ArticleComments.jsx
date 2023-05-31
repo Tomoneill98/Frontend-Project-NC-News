@@ -33,7 +33,6 @@ else {
                  <p className="comment-date">Posted on {moment(`${created_at}`).format("Do MMMM YYYY")}{" "}</p>
                  <p>Votes: {votes}</p>
              </li>
-             
          )
      })}
      </ul>

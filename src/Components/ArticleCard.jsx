@@ -8,7 +8,7 @@ return (
              <li key = {article_id}>
                  <Link to={`/articles/${article_id}`}>
                 <img src={article_img_url} style={{ width: 250, height: 250 }}/>  
-                <h2 className="article-title">{title}</h2>
+                <h2 className="article-card-title">{title}</h2>
              </Link> 
              </li>
             )
