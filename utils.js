@@ -22,4 +22,15 @@ function fetchSingleArticle(article_id) {
   });
 }
 
-export { fetchArticles, fetchTopics, fetchSingleArticle };
+function fetchCommentsByArticle(article_id) {
+  return articlesApi.get(`/articles/${article_id}/comments`).then((res) => {
+    return res.data;
+  });
+}
+
+export {
+  fetchArticles,
+  fetchTopics,
+  fetchSingleArticle,
+  fetchCommentsByArticle,
+};
