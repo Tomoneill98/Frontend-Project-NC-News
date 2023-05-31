@@ -28,9 +28,29 @@ function fetchCommentsByArticle(article_id) {
   });
 }
 
+function incrementVotes(article_id) {
+  return articlesApi
+    .patch(`/articles/${article_id}`, { inc_votes: 1 })
+    .then((res) => {
+      console.log(res);
+      return res.data;
+    });
+}
+
+function decrementVotes(article_id) {
+  return articlesApi
+    .patch(`/articles/${article_id}`, { inc_votes: -1 })
+    .then((res) => {
+      console.log(res);
+      return res.data;
+    });
+}
+
 export {
   fetchArticles,
   fetchTopics,
   fetchSingleArticle,
   fetchCommentsByArticle,
+  incrementVotes,
+  decrementVotes,
 };
