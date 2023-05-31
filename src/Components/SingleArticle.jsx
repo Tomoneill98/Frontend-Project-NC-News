@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react"
 import { fetchSingleArticle } from "../../utils";
 import moment from 'moment'
+import ArticleComments from "./ArticleComments";
 
 
 function SingleArticle() {
@@ -12,7 +13,6 @@ useEffect(() => {
     fetchSingleArticle(article_id).then(({article}) =>
     setArticle(article))
 }, [])
-console.log(article)
 
 
 return (
@@ -23,6 +23,7 @@ return (
         <img src={article.article_img_url}/>
         <p>{article.body}</p>
         <p>{article.votes}</p>
+        <ArticleComments />
         </div>
 
 
