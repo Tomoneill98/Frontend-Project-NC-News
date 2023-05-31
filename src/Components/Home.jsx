@@ -25,7 +25,6 @@ function Home () {
          <main>
           <ArticleCard articles={articles}/>
         </main>
-        
         </>
     )
 }
