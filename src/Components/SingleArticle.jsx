@@ -19,7 +19,7 @@ return (
     <main>
         <div key={article.article_id}>
         <h2 className="article-title">{article.title}</h2>
-        <h3>Written by:{article.author} on {moment(`${article.created_at}`).format("MMMM Do YYYY")}{" "} </h3>
+        <h3>Written by:{article.author} on {moment(`${article.created_at}`).format("Do MMMM YYYY")}{" "} </h3>
         <img src={article.article_img_url}/>
         <p>{article.body}</p>
         <p>{article.votes}</p>
