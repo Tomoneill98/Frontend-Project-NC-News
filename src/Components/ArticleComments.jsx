@@ -18,7 +18,7 @@ function ArticleComments() {
    }, [])
 
    if (isLoading) return <p>Loading ...</p>
-   if (!isLoading && articleComments.comments.length === 0) return <p>No comments</p>
+   if (!isLoading && articleComments.length === 0) return <p>No comments</p>
 
 else {
     return (

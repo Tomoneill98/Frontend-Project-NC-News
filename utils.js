@@ -41,9 +41,16 @@ function postComment(article_id) {
     });
 }
 
+function fetchUsers() {
+  return articlesApi.get("/users").then((res) => {
+    return res.data;
+  });
+}
+
 export {
   fetchArticles,
   fetchTopics,
   fetchSingleArticle,
   fetchCommentsByArticle,
+  fetchUsers,
 };
