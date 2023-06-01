@@ -35,8 +35,6 @@ function handleClick () {
 }
 }
 
-
-
     return (
         <div className="vote-buttons-container">
             <button className="vote-button" onClick={handleClick}>
