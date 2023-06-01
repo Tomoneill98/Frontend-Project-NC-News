@@ -45,4 +45,9 @@ ul {
   font-size: 1.5em;
 }
 
+.users {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
 

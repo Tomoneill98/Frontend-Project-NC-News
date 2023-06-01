@@ -15,7 +15,7 @@ function Users() {
 
     return (
         <main>
-            <ul>
+            <ul className="users">
         {users.map((user) => {
             return <li key={user.username}>
                 <h2>{user.username}</h2>
