@@ -36,14 +36,31 @@ function postComment(username, body, article_id) {
   return articlesApi
     .post(`/articles/${article_id}/comments`, postBody)
     .then((res) => {
+
+function incrementVotes(article_id) {
+  return articlesApi
+    .patch(`/articles/${article_id}`, { inc_votes: 1 })
+    .then((res) => {
+      console.log(res);
+
       return res.data;
     });
 }
+
 
 function fetchUsers() {
   return articlesApi.get("/users").then((res) => {
     return res.data;
   });
+
+function decrementVotes(article_id) {
+  return articlesApi
+    .patch(`/articles/${article_id}`, { inc_votes: -1 })
+    .then((res) => {
+      console.log(res);
+      return res.data;
+    });
+
 }
 
 export {
@@ -53,4 +70,6 @@ export {
   fetchCommentsByArticle,
   fetchUsers,
   postComment,
+  incrementVotes,
+  decrementVotes,
 };
