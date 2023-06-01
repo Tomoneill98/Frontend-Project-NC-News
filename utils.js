@@ -28,6 +28,19 @@ function fetchCommentsByArticle(article_id) {
   });
 }
 
+function postComment(article_id) {
+  const postBody = {
+    username: "",
+    body: "",
+  };
+  return articlesApi
+    .post(`/articles/${article_id}/comments`, postBody)
+    .then((res) => {
+      console.log(res);
+      return res.data;
+    });
+}
+
 export {
   fetchArticles,
   fetchTopics,
