@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 
 function CommentAdder({setArticleComments, currentUser, setFetchedComments}) {
 
-    const [isLoading, setIsLoading] = useState(true)
+   
 const {username} = currentUser
 const [newComment, setNewComment] = useState("")
 const [commentMessage, setCommentMessage] = useState("")
@@ -20,23 +20,24 @@ function handleSubmit(event) {
         setTimeout(() => {
             setCommentMessage("")
         }, 3000)
-         setIsLoading(false)
         setArticleComments((currComments) => {
             return [newCommentFromApi, ...currComments]
         })
-    })
-
-    if (isLoading) return <p>Loading ...</p>
+    })   .catch((error) => {
+        setCommentMessage("Failed to post comment. Please try again later.");
+        console.error(error);
+      });
 }
 return (
     <>
     <form onSubmit={handleSubmit}>
-    <input placeholder="Write a comment..." multiline="true" value={newComment} onChange={(event) => {
+    <textarea placeholder="Write a comment..." multiline="true" value={newComment} onChange={(event) => {
         setNewComment(event.target.value)
-    }}></input>
+    }}></textarea>
     <button type="submit" disabled={!newComment}>➣</button>
     <p className="comment-success-message">{commentMessage}</p>
     <br></br>
+
     </form>
     </>
 )

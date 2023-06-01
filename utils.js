@@ -36,7 +36,6 @@ function postComment(username, body, article_id) {
   return articlesApi
     .post(`/articles/${article_id}/comments`, postBody)
     .then((res) => {
-      console.log(res);
       return res.data;
     });
 }

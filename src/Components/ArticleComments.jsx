@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import moment from "moment";
 
 function ArticleComments({articleComments, setArticleComments, fetchedComments}) {
-
+  
     const [isLoading, setIsLoading] = useState(true)
    const {article_id} = useParams()
    
@@ -15,10 +15,10 @@ function ArticleComments({articleComments, setArticleComments, fetchedComments})
        })
    }, [fetchedComments])
 
-   if (isLoading) return <p>Loading ...</p>
+   if (isLoading) return <p>Loading...</p>
    if (!isLoading && articleComments.length === 0) return <p>No comments</p>
+  
 
-else {
     return (
      <ul>
      {articleComments.map(({comment_id, body, author, votes, created_at}, index) => {
@@ -35,7 +35,6 @@ else {
      </ul>
     )
 
-}
     
 }
 

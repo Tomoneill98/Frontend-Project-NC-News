@@ -8,7 +8,7 @@ import CommentAdder from "./CommentAdder";
 
 function SingleArticle({currentUser}) {
 
-    const [fetchedComments, setFetchedComments] = useState(false)
+const [fetchedComments, setFetchedComments] = useState(false)
 const [articleComments, setArticleComments] = useState([])
 const [article, setArticle] = useState([])
 const {article_id} = useParams()
