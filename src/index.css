@@ -51,3 +51,7 @@ ul {
   flex-wrap: wrap;
 }
 
+.comment-success-message {
+  font-size: 1em;
+}
+

@@ -28,10 +28,10 @@ function fetchCommentsByArticle(article_id) {
   });
 }
 
-function postComment(article_id) {
+function postComment(username, body, article_id) {
   const postBody = {
-    username: "",
-    body: "",
+    username: username,
+    body: body,
   };
   return articlesApi
     .post(`/articles/${article_id}/comments`, postBody)
@@ -53,4 +53,5 @@ export {
   fetchSingleArticle,
   fetchCommentsByArticle,
   fetchUsers,
+  postComment,
 };

@@ -13,9 +13,9 @@ import { UserContext } from './Components/userContext'
 function App() {
 
   const [currentUser, setCurrentUser] = useState({
-    username: "Guest001!",
-    name: "Guest Smith",
-    avatar_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI6HMjzF3Okb-ccSpNxPZQSaSLXXEPlBijwQ&usqp=CAU"
+    username: "jessjelly",
+    name: "Jess Jelly",
+    avatar_url: "https://vignette.wikia.nocookie.net/mrmen/images/4/4f/MR_JELLY_4A.jpg/revision/latest?cb=20180104121141"
   })
 
   return (
@@ -27,7 +27,7 @@ function App() {
       <Route path="/" element={<Home />}></Route>
       <Route path="/topics" element={<Topics />}></Route>
       <Route path="/users" element={<Users />}></Route>
-      <Route path="/articles/:article_id" element={<SingleArticle />}></Route>
+      <Route path="/articles/:article_id" element={<SingleArticle currentUser={currentUser}/>}></Route>
       <Route path="/articles/:article_id/comments" element={<ArticleComments />}></Route>
     </Routes>
     </>
