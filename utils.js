@@ -28,14 +28,30 @@ function fetchCommentsByArticle(article_id) {
   });
 }
 
+function postComment(username, body, article_id) {
+  const postBody = {
+    username: username,
+    body: body,
+  };
+  return articlesApi
+    .post(`/articles/${article_id}/comments`, postBody)
+    .then((res) => {
+
 function incrementVotes(article_id) {
   return articlesApi
     .patch(`/articles/${article_id}`, { inc_votes: 1 })
     .then((res) => {
       console.log(res);
+
       return res.data;
     });
 }
+
+
+function fetchUsers() {
+  return articlesApi.get("/users").then((res) => {
+    return res.data;
+  });
 
 function decrementVotes(article_id) {
   return articlesApi
@@ -44,6 +60,7 @@ function decrementVotes(article_id) {
       console.log(res);
       return res.data;
     });
+
 }
 
 export {
@@ -51,6 +68,8 @@ export {
   fetchTopics,
   fetchSingleArticle,
   fetchCommentsByArticle,
+  fetchUsers,
+  postComment,
   incrementVotes,
   decrementVotes,
 };

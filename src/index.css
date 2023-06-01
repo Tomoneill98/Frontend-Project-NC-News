@@ -131,4 +131,13 @@ border: 1px solid #ccc;
   font-size: 2em;
 }
 
+.users {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comment-success-message {
+  font-size: 1em;
+}
 
