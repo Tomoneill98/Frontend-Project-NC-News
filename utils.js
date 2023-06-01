@@ -4,10 +4,16 @@ const articlesApi = axios.create({
   baseURL: "https://northcoders-news-fsce.onrender.com/api",
 });
 
-function fetchArticles() {
-  return articlesApi.get("/articles").then((res) => {
-    return res.data;
-  });
+function fetchArticles(topic) {
+  return articlesApi
+    .get("/articles", {
+      params: {
+        topic: topic,
+      },
+    })
+    .then((res) => {
+      return res.data;
+    });
 }
 
 function fetchTopics() {
@@ -36,6 +42,9 @@ function postComment(username, body, article_id) {
   return articlesApi
     .post(`/articles/${article_id}/comments`, postBody)
     .then((res) => {
+      return res.data;
+    });
+}
 
 function incrementVotes(article_id) {
   return articlesApi
@@ -47,11 +56,11 @@ function incrementVotes(article_id) {
     });
 }
 
-
 function fetchUsers() {
   return articlesApi.get("/users").then((res) => {
     return res.data;
   });
+}
 
 function decrementVotes(article_id) {
   return articlesApi
@@ -60,7 +69,6 @@ function decrementVotes(article_id) {
       console.log(res);
       return res.data;
     });
-
 }
 
 export {

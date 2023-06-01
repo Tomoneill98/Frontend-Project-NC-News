@@ -21,7 +21,7 @@ function ArticleComments({articleComments, setArticleComments, fetchedComments})
 
 
     return (
-     <ul>
+     <ul className="comments">
      {articleComments.map(({comment_id, body, author, votes, created_at}, index) => {
          return (
              <li key={index}>

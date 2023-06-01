@@ -25,8 +25,8 @@ return (
     <main>
         <div key={article.article_id}>
         <h2 className="article-title">{article.title}</h2>
-        <h3>Written by {article.author} on {moment(`${article.created_at}`).format("Do MMMM YYYY")}{" "} </h3>
         <img src={article.article_img_url}/>
+        <h3>Written by {article.author} on {moment(`${article.created_at}`).format("Do MMMM YYYY")}{" "} </h3>
         <p>{article.body}</p>
          <Votes article={article} setArticle={setArticle} article_id={article_id}/>
         <h3>Comments</h3>

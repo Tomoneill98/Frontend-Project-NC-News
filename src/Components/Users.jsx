@@ -18,7 +18,7 @@ function Users() {
             <ul className="users">
         {users.map((user) => {
             return <li key={user.username}>
-                <h2>{user.username}</h2>
+                <h2 className="username">{user.username}</h2>
                 <img src={user.avatar_url} className="user-icon"style={{ width: 170, height: 170 }}/>
                 <p>{user.kudos}</p>
                 <button onClick={()=>{setCurrentUser(user)}}>Select Profile</button>

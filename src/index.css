@@ -104,7 +104,7 @@ border: 1px solid #ccc;
 }
 
 .article-title {
-  font-size: 3.5em;
+  font-size: 3em;
 }
 
 .article-card-title {
@@ -131,12 +131,32 @@ border: 1px solid #ccc;
   font-size: 2em;
 }
 
+.comment-submit {
+  align-items: center;
+}
+
+.comment-button {
+  height: 100%;
+}
+
 .users {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 200px;
 }
 
+.username {
+  font-size: 1.5em;
+}
+
+.user-icon {
+  width: 170px;
+  height: 170px;
+  margin: 10px;
+  background: none;
+}
 .comment-success-message {
   font-size: 1em;
 }

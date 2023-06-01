@@ -30,11 +30,11 @@ function handleSubmit(event) {
 }
 return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="comment-submit">
     <textarea placeholder="Write a comment..." multiline="true" value={newComment} onChange={(event) => {
         setNewComment(event.target.value)
     }}></textarea>
-    <button type="submit" disabled={!newComment}>➣</button>
+    <button type="submit" disabled={!newComment} className="comment-button">➣</button>
     <p className="comment-success-message">{commentMessage}</p>
     <br></br>
 
