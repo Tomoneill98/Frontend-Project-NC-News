@@ -13,16 +13,20 @@ const {article_id }= useParams()
 function handleSubmit(event) {
     setFetchedComments(false)
     event.preventDefault()
+    setArticleComments((currComments) => {
+        return ["Comment posting...", ...currComments]
+    })
+    // spread old comments + new optimistic comment then once post comment done, then after comment posted
     postComment(username, newComment, article_id).then((newCommentFromApi) => {
         setNewComment("")
         setFetchedComments(true)
+        setArticleComments((currComments) => {
+            return [newCommentFromApi, ...currComments]
+        })
         setCommentMessage("Comment posted successfully.")
         setTimeout(() => {
             setCommentMessage("")
         }, 3000)
-        setArticleComments((currComments) => {
-            return [newCommentFromApi, ...currComments]
-        })
     })   .catch((error) => {
         setCommentMessage("Failed to post comment. Please try again later.");
         console.error(error);

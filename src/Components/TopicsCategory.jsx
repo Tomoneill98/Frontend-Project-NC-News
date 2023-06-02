@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { fetchArticles } from "../../utils"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 function TopicsCategory() {
