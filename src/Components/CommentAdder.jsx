@@ -2,7 +2,7 @@ import { postComment } from "../../utils";
 import { useState } from "react";
 import { useParams } from "react-router";
 
-function CommentAdder({setArticleComments, currentUser, setFetchedComments, setIsPosting}) {
+function CommentAdder({setArticleComments, currentUser, setFetchedComments}) {
 
    
 const {username} = currentUser
@@ -13,12 +13,9 @@ const {article_id }= useParams()
  
 function handleSubmit(event) {
     setFetchedComments(false)
-    setIsPosting("Comment Posting")
     event.preventDefault()
-    // spread old comments + new optimistic comment then once post comment done, then after comment posted
     postComment(username, newComment, article_id).then((newCommentFromApi) => {
         setNewComment("")
-        setIsPosting("")
         setFetchedComments(true)
         setArticleComments((currComments) => {
             return [newCommentFromApi, ...currComments]
@@ -34,14 +31,13 @@ function handleSubmit(event) {
 }
 return (
     <>
-    <form onSubmit={handleSubmit} className="comment-submit">
-    <textarea placeholder="Write a comment..." multiline="true" value={newComment} onChange={(event) => {
+    <form onSubmit={handleSubmit} className="comment-container">
+    <textarea className="comment-form"placeholder="Write a comment..." multiline="true" value={newComment} onChange={(event) => {
         setNewComment(event.target.value)
     }}></textarea>
-    <button type="submit" disabled={!newComment} className="comment-button">➣</button>
+    <button type="submit" disabled={!newComment} className="comment-button">➤</button>
     <p className="comment-success-message">{commentMessage}</p>
     <br></br>
-
     </form>
     </>
 )

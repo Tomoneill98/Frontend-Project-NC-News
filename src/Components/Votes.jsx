@@ -2,8 +2,6 @@ import { incrementVotes, decrementVotes } from "../../utils"
 import { useState } from "react"
 
 function Votes({article, setArticle, article_id}) {
-
-
     const [voted, setVoted] = useState(false)
 
 function handleClick () {
