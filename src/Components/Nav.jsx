@@ -8,10 +8,9 @@ function Nav () {
   return (
     <nav className="nav">
         <Link to="/"> <img src={Logo} className="nav-logo"style={{ width: 200, height: 150 }}/></Link>
-        <Link to="/topics">Topics</Link>
-        <Link to="/users"><img src={currentUser.avatar_url} className="nav-user-icon"alt={currentUser.username} style={{ width: 80, height: 80 }}/></Link>
-        <p className="nav-list-item"> Logged in as {currentUser.username}</p>
-         
+        <Link className="nav-list-item"to="/topics">Topics</Link>
+        <Link to="/users"><img src={currentUser.avatar_url} className="nav-user-icon"alt={currentUser.username} style={{ width: 100, height: 100 }}/></Link>
+        <p className="nav-user"> Logged in as {currentUser.username}</p>
     </nav>
   )
 }

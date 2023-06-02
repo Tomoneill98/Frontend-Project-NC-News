@@ -2,23 +2,23 @@ import { postComment } from "../../utils";
 import { useState } from "react";
 import { useParams } from "react-router";
 
-function CommentAdder({setArticleComments, currentUser, setFetchedComments}) {
+function CommentAdder({setArticleComments, currentUser, setFetchedComments, setIsPosting}) {
 
    
 const {username} = currentUser
 const [newComment, setNewComment] = useState("")
 const [commentMessage, setCommentMessage] = useState("")
 const {article_id }= useParams()
+
  
 function handleSubmit(event) {
     setFetchedComments(false)
+    setIsPosting("Comment Posting")
     event.preventDefault()
-    setArticleComments((currComments) => {
-        return ["Comment posting...", ...currComments]
-    })
     // spread old comments + new optimistic comment then once post comment done, then after comment posted
     postComment(username, newComment, article_id).then((newCommentFromApi) => {
         setNewComment("")
+        setIsPosting("")
         setFetchedComments(true)
         setArticleComments((currComments) => {
             return [newCommentFromApi, ...currComments]

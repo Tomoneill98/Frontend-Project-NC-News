@@ -3,16 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: whitesmoke
-}
-
 body {
   margin: 0;
   padding-top: 120px;
@@ -25,6 +15,16 @@ body {
   color: whitesmoke;
   font-family:monospace;
 }
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: whitesmoke
+}
+
 
 nav {
   display: flex;
@@ -49,21 +49,34 @@ nav a {
   color: #eb4f95
 } 
 
+.nav-user {
+  color: #eb4f95
+}
 h1 {
   font-size: 3.5em;
   line-height: 1.1;
+  color: whitesmoke;
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2em;
+  color: whitesmoke;
 }
 
 h3 {
-  font-size: 2em;
+  font-size: 1.7em;
+  color: whitesmoke;
 }
 
 p {
   font-size: 1.5em;
+}
+
+.article-body {
+  font-size: 1.5em;
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 90%;
 }
 
 .home-intro {
@@ -88,7 +101,6 @@ p {
   max-width: 100%;
   height: auto;
 }
-
 
 .comments {
   list-style: none;
@@ -159,5 +171,41 @@ border: 1px solid #ccc;
 }
 .comment-success-message {
   font-size: 1em;
+}
+
+.topics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.topic-slug {
+  font-size: 5em;
+  margin: 0 10px;
+  color: #eb4f95;
+}
+
+.topics li:hover .topic-slug {
+  color: whitesmoke;
+}
+
+.topic-articles {
+  list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.topic-articles li {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.topic-articles li img {
+  max-width: 100%;
+  height: auto;
 }
 
