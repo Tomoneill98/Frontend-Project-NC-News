@@ -9,6 +9,7 @@ import ArticleComments from './Components/ArticleComments'
 import Users from './Components/Users'
 import { useState } from 'react'
 import { UserContext } from './Components/userContext'
+import TopicsCategory from './Components/TopicsCategory'
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
       <Route path="/users" element={<Users />}></Route>
       <Route path="/articles/:article_id" element={<SingleArticle currentUser={currentUser}/>}></Route>
       <Route path="/articles/:article_id/comments" element={<ArticleComments />}></Route>
-      <Route path="/articles/topics/:topic" element={<Home />}></Route>
+      <Route path="/topics/:topic" element={<TopicsCategory />}></Route>
     </Routes>
     </>
     </UserContext.Provider>

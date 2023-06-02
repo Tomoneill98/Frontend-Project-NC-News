@@ -16,7 +16,7 @@ function Topics () {
     <ul className="topics">
       {topics.map((topic) => (
         <li key={topic.slug}>
-          <Link to={`/articles/${topic.slug}`}>
+          <Link to={`/topics/${topic.slug}`}>
             <h2 className="topic-slug">{topic.slug}</h2>
           </Link>
         </li>
