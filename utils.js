@@ -16,6 +16,14 @@ function fetchTopics() {
   });
 }
 
+function fetchArticlesByTopic(topic) {
+  return articlesApi.get(`/articles?topic=${topic}`).then(({ data }) => {
+    return data.articles.filter((articles) => {
+      return articles.topic === topic;
+    });
+  });
+}
+
 function fetchSingleArticle(article_id) {
   return articlesApi.get(`/articles/${article_id}`).then((res) => {
     return res.data;
@@ -74,4 +82,5 @@ export {
   postComment,
   incrementVotes,
   decrementVotes,
+  fetchArticlesByTopic,
 };
