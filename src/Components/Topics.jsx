@@ -10,7 +10,6 @@ function Topics () {
         fetchTopics().then(({topics}) => {
             setTopics(topics)
                 setIsLoading(false)
-                setIsLoading(false)
 
         })
     }, [])
@@ -19,14 +18,13 @@ function Topics () {
         return <h2>Loading...</h2>
     }
 
-    
 
 return (
   <div className="topics-container">
     <ul className="topics">
       {topics.map((topic) => (
         <li key={topic.slug} className="topic-item">
-          <Link to={`/articles/${topic.slug}`} className="topic-link">
+          <Link to={`/articles/topics/${topic.slug}`} className="topic-link">
             <div className="topic-box">
               <h2 className="topic-slug">{topic.slug}</h2>
             </div>
