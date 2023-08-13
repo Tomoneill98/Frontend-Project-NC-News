@@ -1,7 +1,7 @@
-# Frontend-Project-XOXO-News
+# Frontend Project: Readdit News
 
 ## Introduction
-XOXO News is a Reddit-style news articles website in which users can log in to a profile and read or review articles of different categories by liking or posting comments
+Readdit News is a Reddit-style news articles website in which users can log in to a profile and read or review articles of different categories by liking or posting comments
 under them, as well as viewing comments from other profiles. This project is a CRUD application built with React and styled with CSS. It is a companion to the
 [Backend-Project-XOXO News] (https://github.com/Tomoneill98/Backend-Project-NC-News).
 
