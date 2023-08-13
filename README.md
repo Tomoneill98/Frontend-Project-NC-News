@@ -3,10 +3,10 @@
 ## Introduction
 Readdit News is a Reddit-style news articles website in which users can log in to a profile and read or review articles of different categories by liking or posting comments
 under them, as well as viewing comments from other profiles. This project is a CRUD application built with React and styled with CSS. It is a companion to the
-[Backend-Project-XOXO News] (https://github.com/Tomoneill98/Backend-Project-NC-News).
+[Backend-Project-Readdit News] (https://github.com/Tomoneill98/Backend-Project-Readdit-News).
 
 ## Website
-https://tom-xoxo-news.netlify.app/
+https://tom-readdit-news.netlify.app/
 
 ## Getting Started
 To run this repository locally, follow these steps:
@@ -14,13 +14,13 @@ To run this repository locally, follow these steps:
 1. Clone the repository:
 
 ```console
-git clone https://github.com/Tomoneill98/Frontend-Project-NC-News.git
+git clone https://github.com/Tomoneill98/Frontend-Project-Readdit-News.git
 ```
 
 2. Open the folder:
 
 ```console
-cd fe-xoxo-news
+cd fe-readdit-news
 ```
 
 3. Install the dependencies:
