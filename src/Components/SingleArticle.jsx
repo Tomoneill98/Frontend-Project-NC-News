@@ -29,7 +29,6 @@ return (
         <img src={article.article_img_url}/>
         <p>{article.body}</p>
          <Votes article={article} setArticle={setArticle} article_id={article_id}/>
-        <h3>Comments</h3>
         <CommentAdder setArticleComments={setArticleComments} currentUser={currentUser} setFetchedComments={setFetchedComments}/>
         <ArticleComments articleComments={articleComments} setArticleComments={setArticleComments} fetchedComments={fetchedComments}/>
         </div>

@@ -21,19 +21,23 @@ function Topics () {
 
     
 
-   return (
-  <>
+return (
+  <div className="topics-container">
     <ul className="topics">
       {topics.map((topic) => (
-        <li key={topic.slug}>
-          <Link to={`/articles/${topic.slug}`}>
-            <h2 className="topic-slug">{topic.slug}</h2>
+        <li key={topic.slug} className="topic-item">
+          <Link to={`/articles/${topic.slug}`} className="topic-link">
+            <div className="topic-box">
+              <h2 className="topic-slug">{topic.slug}</h2>
+            </div>
           </Link>
         </li>
       ))}
     </ul>
-  </>
+  </div>
 );
+
+
 
 }
 

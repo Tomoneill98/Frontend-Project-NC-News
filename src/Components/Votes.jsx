@@ -39,7 +39,7 @@ function handleClick () {
         <div className="vote-buttons-container">
             <button className="vote-button" onClick={handleClick}>
                 👍🏼</button>
-            <p className="vote-count"> {article.votes} </p>
+            <p className="vote-count"> {article.votes} likes </p>
         </div>
     )
 }

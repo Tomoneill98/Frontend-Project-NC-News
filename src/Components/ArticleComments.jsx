@@ -21,18 +21,22 @@ function ArticleComments({articleComments, setArticleComments, fetchedComments})
 
 
     return (
+        <section className="Comments">
+            <h3 className="comments-header">Comments</h3>
+
      <ul>
      {articleComments.map(({comment_id, body, author, votes, created_at}, index) => {
          return (
-             <li key={index}>
-                 <h2 className = "comment-heading">{author}</h2>
+             <li key={index} className="comment">
+                 <h2 >{author}</h2>
                  <p>{body}</p>
-                 <p className="comment-date">Posted on {moment(`${created_at}`).format("Do MMMM YYYY")}{" "}</p>
+                 <p >Posted on {moment(`${created_at}`).format("Do MMMM YYYY")}{" "}</p>
                  <p>Votes: {votes}</p>
              </li>
          )
      })}
      </ul>
+        </section>
     )
 
     

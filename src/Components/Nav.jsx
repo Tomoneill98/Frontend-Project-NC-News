@@ -10,6 +10,9 @@ function Nav () {
     <nav className="nav">
         <Link to="/"> <img src={Logo} className="nav-logo"/></Link>
         <Link to="/topics">Topics</Link>
+        <section className="profile">
+				User: <Link to="/users">{currentUser.username}</Link>{' '}
+			</section>
         <Link to="/users"><img src={currentUser.avatar_url} className="nav-user-icon"alt={currentUser.username} style={{ width: 80, height: 80 }}/></Link>
          
     </nav>
