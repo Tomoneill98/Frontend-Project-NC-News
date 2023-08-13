@@ -8,7 +8,7 @@ function Nav () {
   const {currentUser} = useContext(UserContext)
   return (
     <nav className="nav">
-        <Link to="/"> <img src={Logo} className="nav-logo"style={{ width: 200, height: 150 }}/></Link>
+        <Link to="/"> <img src={Logo} className="nav-logo"/></Link>
         <Link to="/topics">Topics</Link>
         <Link to="/users"><img src={currentUser.avatar_url} className="nav-user-icon"alt={currentUser.username} style={{ width: 80, height: 80 }}/></Link>
          

@@ -4,12 +4,22 @@ import { fetchTopics } from "../../utils"
 
 function Topics () {
     const [topics, setTopics] = useState([])
+       const [isLoading, setIsLoading] = useState(true)
 
       useEffect(() => {
         fetchTopics().then(({topics}) => {
             setTopics(topics)
+                setIsLoading(false)
+                setIsLoading(false)
+
         })
     }, [])
+
+     if(isLoading) {
+        return <h2>Loading...</h2>
+    }
+
+    
 
    return (
   <>

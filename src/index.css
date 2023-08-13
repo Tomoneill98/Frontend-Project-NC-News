@@ -1,7 +1,13 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+#root {
+  font-family: 'Signika Negative',
+    'Signika Negative-fallback',
+    'Open Sans',
+    'Open Sans-fallback',
+    system-ui,
+    sans-serif;
+  line-height: 1.2;
+  font-weight: lighter;
+
 }
 
 a {
@@ -10,12 +16,12 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: whitesmoke
+  color: #ff2c73
 }
 
 body {
   margin: 0;
-  padding-top: 120px;
+  padding-top: 20px;
   padding: 1;
   display: flex;
   place-items: center;
@@ -27,18 +33,19 @@ body {
 }
 
 nav {
+font-weight: 700;
+  border-bottom: solid 1px #ff2c73 ;
   display: flex;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: space-evenly;
+  height: 100px;
   width: 100%;
-  padding: 10px;
+  align-items: center;
+  position: sticky;
 }
 
 nav img.nav-logo {
-  width: 200px;
-  height: 150px;
+  width: 80px;
+  height: 100px;
 }
 
 nav a {
@@ -46,7 +53,7 @@ nav a {
   margin-left: 10px;
   margin-right: 10px;
   text-decoration: none;
-  color: #eb4f95
+color: whitesmoke;
 } 
 
 h1 {
@@ -55,7 +62,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 1rem;
 }
 
 h3 {
@@ -64,11 +71,10 @@ h3 {
 
 p {
   font-size: 1.5em;
+  margin: 2em;
+  text-align: justify;
 }
 
-.home-intro {
-  font-size: 2em;
-}
 
 .article-card {
   list-style: none;
@@ -108,7 +114,7 @@ border: 1px solid #ccc;
 }
 
 .article-card-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: whitesmoke;
 }
 
