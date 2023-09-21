@@ -1,14 +1,13 @@
-// import { useState } from 'react'
 import './App.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { useState } from 'react'
+import { UserContext } from './Components/userContext'
 import Home from './Components/Home'
 import Nav from './Components/Nav'
 import Topics from './Components/Topics'
 import SingleArticle from './Components/SingleArticle'
 import ArticleComments from './Components/ArticleComments'
 import Users from './Components/Users'
-import { useState } from 'react'
-import { UserContext } from './Components/userContext'
 import ArticlesByTopic from './Components/ArticlesByTopic'
 
 function App() {
