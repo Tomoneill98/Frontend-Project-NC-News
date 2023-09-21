@@ -11,10 +11,10 @@
 
 }
 
+/* Global styles */
 body {
   margin: 0;
-  padding-top: 20px;
-  padding: 1;
+  padding: 20px;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -26,22 +26,26 @@ body {
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: #ff2c73
+  color: #ff2c73;
 }
 
+/* Navigation */
 nav {
-font-weight: 700;
-  border-bottom: solid 1px #ff2c73 ;
+  font-weight: 700;
+  border-bottom: 1px solid #ff2c73;
   display: flex;
   justify-content: space-evenly;
   height: 100px;
   width: 100%;
   align-items: center;
   position: sticky;
+  top: 0;
+  background-color: #213547;
 }
 
 nav img.nav-logo {
@@ -54,9 +58,10 @@ nav a {
   margin-left: 10px;
   margin-right: 10px;
   text-decoration: none;
-color: whitesmoke;
-} 
+  color: whitesmoke;
+}
 
+/* Headings and text */
 h1 {
   font-size: 3.5em;
   line-height: 1.1;
@@ -72,11 +77,11 @@ h3 {
 
 p {
   font-size: 1.5em;
-  margin: 2em;
+  margin: 2em 0;
   text-align: justify;
 }
 
-
+/* Article cards */
 .article-card {
   list-style: none;
   display: flex;
@@ -96,15 +101,7 @@ p {
   height: auto;
 }
 
-
-
-li {
-  display: inline-block;
-  margin: 0 2px;
-  text-align: center;
-}
-
-
+/* Comments and voting */
 .comment {
   width: 70%;
   margin: 20px 0 10px 0;
@@ -114,8 +111,8 @@ li {
 }
 
 .comments-header {
-text-align: left;
-margin-left: 250px;
+  text-align: left;
+  margin-left: 250px;
 }
 
 .article-title {
@@ -126,7 +123,6 @@ margin-left: 250px;
   font-size: 1.2em;
   color: whitesmoke;
 }
-
 
 .vote-buttons-container {
   display: flex;
@@ -149,6 +145,7 @@ margin-left: 250px;
   font-size: 2em;
 }
 
+/* Users and topics */
 .users {
   list-style: none;
   display: flex;
@@ -164,7 +161,6 @@ margin-left: 250px;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* Centers vertically */
 }
 
 .topics {
@@ -175,7 +171,6 @@ margin-left: 250px;
 
 .topic-item {
   margin: 0 10px;
-  /* Adjust the spacing between topics */
 }
 
 .topic-link {
@@ -188,9 +183,7 @@ margin-left: 250px;
   align-items: center;
   justify-content: center;
   width: 200px;
-  /* Adjust the width of the box */
   height: 200px;
-  /* Adjust the height of the box */
   border: 2px solid #ccc;
   transition: background-color 0.3s;
 }
