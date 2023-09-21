@@ -4,7 +4,6 @@ import { useParams } from "react-router";
 
 function CommentAdder({setArticleComments, currentUser, setFetchedComments}) {
 
-   
 const {username} = currentUser
 const [newComment, setNewComment] = useState("")
 const [commentMessage, setCommentMessage] = useState("")
@@ -45,27 +44,6 @@ return (
     </section>
 )
 
-// return (
-//         <>
-//             <h2>Comments:</h2>
-//             <br></br>
-//             <form onSubmit={handleSubmit}>
-//                 <label htmlFor="newComment" className="say">Have Your Say:</label>
-//                 <br/>
-//                 <textarea
-//                 style={{height:100, width: 400}}
-//                 placeholder="Insert comment here..."
-//                 id="newComment"
-//                 multiline="true"
-//                 value={newComment}
-//                 onChange={(event) => setNewComment(event.target.value)}
-//                 ></textarea>
-//                 <br/>
-//                 <button disabled={!newComment}>Add Comment</button>
-//                 <p>{ guestError === false ? '' : 'Cannot post a comment as guest. Please sign in!' }</p>
-//             </form>
-//         </>
-//     )
 }
 
 export default CommentAdder;
